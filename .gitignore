@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+tests/out/*.svg
+.DS_Store
+.pytest_cache/
+
+# Vendor binary tools (we only need the JS level data)
+vendor/**/tools/
+vendor/**/*.d64
+vendor/**/*.exe
+vendor/**/*.dsk
+vendor/**/image/
+vendor/**/sound/
+vendor/**/cursor/

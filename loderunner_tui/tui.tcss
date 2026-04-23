@@ -1,0 +1,106 @@
+/* Lode Runner TUI stylesheet. 4-panel: Board / Status / Controls / Log. */
+
+Screen {
+    layout: horizontal;
+    background: rgb(6,6,10);
+}
+
+#left {
+    width: 1fr;
+    height: 100%;
+    padding: 0 1;
+}
+
+#right {
+    width: 32;
+    height: 100%;
+    border-left: heavy rgb(40,40,48);
+    padding: 0 1;
+}
+
+BoardView {
+    height: 1fr;
+    width: 100%;
+    background: rgb(6,6,10);
+}
+
+#flash {
+    height: 1;
+    content-align: left middle;
+    color: rgb(220,220,220);
+    background: rgb(18,18,24);
+    padding: 0 1;
+}
+
+StatusPanel, ControlsPanel {
+    height: auto;
+    width: 100%;
+    padding: 1 1;
+    background: rgb(14,14,20);
+    border: solid rgb(40,40,48);
+    margin-bottom: 1;
+}
+
+#log {
+    height: 1fr;
+    width: 100%;
+    background: rgb(12,12,16);
+    border: solid rgb(40,40,48);
+    color: rgb(190,190,200);
+}
+
+Header {
+    background: rgb(20,20,28);
+    color: rgb(220,220,235);
+}
+
+Footer {
+    background: rgb(20,20,28);
+    color: rgb(180,180,200);
+}
+
+LevelSelectScreen {
+    align: center middle;
+}
+#select-panel {
+    width: 72;
+    height: 32;
+    background: rgb(16,16,22);
+    border: heavy rgb(90,90,120);
+    padding: 1 2;
+}
+
+WonScreen {
+    align: center middle;
+}
+#won-panel {
+    width: 52;
+    height: 11;
+    background: rgb(20,35,20);
+    border: heavy rgb(120,230,120);
+    content-align: center middle;
+    padding: 1 2;
+}
+
+LostScreen {
+    align: center middle;
+}
+#lost-panel {
+    width: 52;
+    height: 11;
+    background: rgb(35,20,20);
+    border: heavy rgb(230,90,90);
+    content-align: center middle;
+    padding: 1 2;
+}
+
+HelpScreen {
+    align: center middle;
+}
+#help-panel {
+    width: 66;
+    height: 26;
+    background: rgb(16,16,22);
+    border: heavy rgb(90,90,120);
+    padding: 1 2;
+}
