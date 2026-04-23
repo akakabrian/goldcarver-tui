@@ -129,7 +129,7 @@ def _compose_cell(g: Game, x: int, y: int) -> tuple[str, Style]:
 
     # Terrain.
     t = g.visible_tile(x, y)
-    return tiles.tile_glyph(t), tiles.tile_style(t, x, y)
+    return tiles.tile_glyph_at(t, x, y), tiles.tile_style(t, x, y)
 
 
 def _rle(segs: list[Segment]) -> list[Segment]:

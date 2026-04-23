@@ -7,15 +7,19 @@ from rich.style import Style
 from . import engine as E
 
 # --- glyphs ---------------------------------------------------------
+# Brick uses a 2-glyph pattern keyed on (x+y)&1 so a long wall reads as
+# masonry rather than a flat block (palette rule #2 from tui-game-build).
+GLYPH_BRICK_A = "▓"
+GLYPH_BRICK_B = "▒"
 GLYPH = {
     E.EMPTY:   " ",
-    E.BRICK:   "▓",
+    E.BRICK:   GLYPH_BRICK_A,   # default — renderer alternates via tile_glyph_at
     E.SOLID:   "█",
     E.LADDER:  "╫",
     E.ROPE:    "─",
-    E.TRAP:    "░",
-    E.HOLE:    " ",       # empty look (dug out)
-    E.HLADDER: " ",       # invisible until all gold collected
+    E.TRAP:    "▓",             # looks like brick (can't tell until you fall)
+    E.HOLE:    " ",              # empty look (dug out)
+    E.HLADDER: " ",             # invisible until all gold collected
 }
 
 GLYPH_GOLD = "¤"
@@ -67,4 +71,11 @@ def tile_style(tile: str, x: int, y: int) -> Style:
 
 
 def tile_glyph(tile: str) -> str:
+    return GLYPH.get(tile, " ")
+
+
+def tile_glyph_at(tile: str, x: int, y: int) -> str:
+    """Position-aware glyph — brick cycles between two patterns."""
+    if tile == E.BRICK:
+        return GLYPH_BRICK_A if (x + y) & 1 else GLYPH_BRICK_B
     return GLYPH.get(tile, " ")
