@@ -546,6 +546,69 @@ async def s_undo_after_reset_is_noop(app, pilot):
     assert app.game.tick_count == tc  # no change
 
 
+async def s_all_classic_levels_tickable(app, pilot):
+    """Every classic level must parse AND be tickable for 5 ticks with
+    random actions without crashing. This catches engine regressions
+    that only fire on unusual geometries (TRAP, HLADDER stacks, etc.)."""
+    import random as _rnd
+    _rnd.seed(42)
+    classic = pack_by_name("classic")
+    failures = []
+    actions = [E.ACT_NONE, E.ACT_LEFT, E.ACT_RIGHT, E.ACT_UP, E.ACT_DOWN,
+               E.ACT_DIG_L, E.ACT_DIG_R]
+    for i, ld in enumerate(classic.levels):
+        try:
+            g = ld.load()
+            for _ in range(5):
+                g.tick(_rnd.choice(actions))
+        except Exception as e:
+            failures.append(f"classic#{i + 1}: {type(e).__name__}: {e}")
+    assert not failures, (
+        f"{len(failures)} level(s) crashed on tick:\n  "
+        + "\n  ".join(failures[:5])
+    )
+
+
+async def s_rope_hang(app, pilot):
+    """Runner on a rope cell does not fall."""
+    level = (
+        "&                           \n"
+        + "    ------                  \n"
+        + "                            \n"
+        + "                            \n"
+        + "############################\n"
+        + _BLANK_ROW * 11
+    )
+    g = Game.parse(level, title="rope-hang")
+    # Place runner ON a rope cell explicitly.
+    g.runner = (6, 1)
+    g._snapshot_initial()
+    # Wait on the rope for 3 ticks — should NOT fall.
+    for _ in range(3):
+        g.tick(E.ACT_NONE)
+    assert g.runner == (6, 1), f"runner fell off rope: {g.runner}"
+    # Walking right along the rope should still work.
+    g.tick(E.ACT_RIGHT)
+    assert g.runner == (7, 1), g.runner
+
+
+async def s_drop_from_rope(app, pilot):
+    """Pressing down while on rope drops you off."""
+    level = (
+        "&                           \n"
+        + "    ------                  \n"
+        + "                            \n"
+        + "                            \n"
+        + "############################\n"
+        + _BLANK_ROW * 11
+    )
+    g = Game.parse(level, title="rope-drop")
+    g.runner = (6, 1)
+    g._snapshot_initial()
+    g.tick(E.ACT_DOWN)
+    assert g.runner[1] > 1, f"didn't drop: {g.runner}"
+
+
 SCENARIOS: list[Scenario] = [
     # Pure-engine
     Scenario("parse_minimal", s_parse_minimal),
@@ -590,6 +653,9 @@ SCENARIOS: list[Scenario] = [
     Scenario("next_at_end_doesnt_crash", s_next_at_end_doesnt_crash),
     Scenario("prev_at_start_doesnt_crash", s_prev_at_start_doesnt_crash),
     Scenario("undo_after_reset_is_noop", s_undo_after_reset_is_noop),
+    Scenario("rope_hang", s_rope_hang),
+    Scenario("drop_from_rope", s_drop_from_rope),
+    Scenario("all_classic_levels_tickable", s_all_classic_levels_tickable),
 ]
 
 
