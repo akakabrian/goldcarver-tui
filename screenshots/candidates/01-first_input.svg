@@ -1,0 +1,50 @@
+ ⭘                                                          Lode Runner TUI — Handmade — level 1/3
+                                                                                                                                ┃ ┌───────────────────────────┐
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │ Pack   Handmade           │
+                                                                                                                                ┃ │ Level  1 / 3              │
+                                                                                                                                ┃ │        Handmade #1 —      │
+                                                                                                                                ┃ │ First Steps               │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │ Gold    0 / 4             │
+                                                                                                                                ┃ │ Guards  0                 │
+                                                                                                                                ┃ │ Holes   0                 │
+                                                                                                                                ┃ │ Tick    1                 │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ └───────────────────────────┘
+                                                                                                                                ┃
+                                                                                                                                ┃ ┌───────────────────────────┐
+                                                                                                                                ┃ │                           │
+                                                           ¤                                                                    ┃ │ Controls                  │
+                                                     ╫▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒                                                  ┃ │   ←→↑↓ / hjkl   move      │
+                                                     ╫                                                                          ┃ │   z / x         dig left  │
+                                                     ╫      ¤                                                                   ┃ │ / right                   │
+                                                     ╫ ▓▒▓▒▓▒▓                                                                  ┃ │   space         wait      │
+                                                     ╫                    ¤                                                     ┃ │   u             undo      │
+                                                     ╫                ▒▓▒▓▒▓▒▓                                                  ┃ │   r             reset     │
+                                                     ╫                                                                          ┃ │   n / p         next /    │
+                                                     ╫            ¤                                                             ┃ │ prev                      │
+                                                     ╫ ▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒                                                    ┃ │   L             level     │
+                                                     ╫                                                                          ┃ │ select                    │
+                                                     ╫                                                                          ┃ │   ?             help      │
+                                                     ╫   ☺                                                                      ┃ │   q             quit      │
+                                                  ▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒▓▒                                                  ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ └───────────────────────────┘
+                                                                                                                                ┃
+                                                                                                                                ┃ ┌───────────────────────────┐
+                                                                                                                                ┃ │▶ Handmade #1 — First Ste  │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │                           │
+                                                                                                                                ┃ │             ▋             │
+  Handmade #1 — First Steps                                                                                                     ┃ └───────────────────────────┘
+ u undo  r reset  n next  p prev  L levels  ? help  q quit                                                                                          ▏^p palette

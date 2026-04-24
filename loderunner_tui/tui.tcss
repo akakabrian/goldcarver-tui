@@ -12,7 +12,9 @@ Screen {
 }
 
 #right {
-    width: 32;
+    width: 1fr;
+    min-width: 24;
+    max-width: 32;
     height: 100%;
     border-left: heavy rgb(40,40,48);
     padding: 0 1;
