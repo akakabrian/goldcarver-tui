@@ -1,4 +1,7 @@
 # goldcarver-tui
+
+> Inspired by Lode Runner (1983, Broderbund). Trademarks belong to their respective owners. Unaffiliated fan project.
+
 Dig the trap. Take the gold.
 
 ![Hero](screenshots/hero.svg)
