@@ -262,7 +262,7 @@ def _build_handmade() -> Pack:
     return Pack(
         name="handmade",
         display="Handmade",
-        credit="loderunner-tui authors — CC0",
+        credit="goldcarver-tui authors — CC0",
         levels=levels,
     )
 

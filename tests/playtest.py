@@ -13,8 +13,8 @@ import os
 import sys
 from pathlib import Path
 
-from loderunner_tui.app import LodeRunnerApp
-from loderunner_tui.engine import Game, ACT_RIGHT, ACT_DIG_R
+from goldcarver_tui.app import LodeRunnerApp
+from goldcarver_tui.engine import Game, ACT_RIGHT, ACT_DIG_R
 
 OUT = Path(__file__).resolve().parent / "out"
 OUT.mkdir(exist_ok=True)
@@ -160,7 +160,7 @@ async def playtest() -> int:
 
 
 def pty_smoke() -> int:
-    """Launch loderunner-tui in a real pty via pexpect, let it boot,
+    """Launch goldcarver-tui in a real pty via pexpect, let it boot,
     send q, confirm clean exit."""
     try:
         import pexpect  # type: ignore

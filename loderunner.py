@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Entry point for loderunner-tui."""
+"""Entry point for goldcarver-tui."""
 
 from __future__ import annotations
 
 import argparse
 import sys
 
-from loderunner_tui.app import run
-from loderunner_tui.levels import PACKS
+from goldcarver_tui.app import run
+from goldcarver_tui.levels import PACKS
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        prog="loderunner-tui",
+        prog="goldcarver-tui",
         description="Terminal Lode Runner — classic 150 levels + more.",
     )
     ap.add_argument(

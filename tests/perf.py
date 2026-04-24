@@ -1,4 +1,4 @@
-"""Hot-path benchmarks for loderunner-tui.
+"""Hot-path benchmarks for goldcarver-tui.
 
 The engine is tiny so these mostly guard against regressions. Baseline
 numbers are printed — run again after any engine change to compare."""
@@ -9,11 +9,11 @@ import random
 import time
 from pathlib import Path
 
-from loderunner_tui.engine import (
+from goldcarver_tui.engine import (
     ACT_NONE, ACT_LEFT, ACT_RIGHT, ACT_UP, ACT_DOWN, ACT_DIG_L, ACT_DIG_R,
     Game,
 )
-from loderunner_tui.levels import PACKS
+from goldcarver_tui.levels import PACKS
 
 
 def bench(label: str, fn, repeats: int = 2000) -> None:

@@ -1,5 +1,5 @@
 [project]
-name = "loderunner-tui"
+name = "goldcarver-tui"
 version = "0.1.0"
 description = "Terminal-native Lode Runner clone with 150+ classic levels"
 requires-python = ">=3.10"
@@ -12,7 +12,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["loderunner_tui"]
+packages = ["goldcarver_tui"]
 
 [tool.setuptools.package-data]
-loderunner_tui = ["tui.tcss"]
+goldcarver_tui = ["tui.tcss"]

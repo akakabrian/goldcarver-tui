@@ -133,14 +133,14 @@ and credit Simon Hung. If a takedown arrives we fall back to the
 ## Layout
 
 ```
-loderunner-tui/
+goldcarver-tui/
 ├── loderunner.py              # entry: argparse → run(...)
 ├── pyproject.toml
 ├── Makefile
 ├── DECISIONS.md               # this file
 ├── vendor/
 │   └── lode-runner-total-recall/  # Simon Hung's HTML5 remake (reference)
-├── loderunner_tui/
+├── goldcarver_tui/
 │   ├── __init__.py
 │   ├── engine.py              # Game, tick, move, dig, gravity, guard AI
 │   ├── levels.py              # Pack loader; parses the vendored .js files

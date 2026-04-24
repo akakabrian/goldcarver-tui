@@ -1,4 +1,4 @@
-# loderunner-tui screenshots
+# goldcarver-tui screenshots
 
 ![hero](hero.svg)
 

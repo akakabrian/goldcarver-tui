@@ -1,4 +1,4 @@
-"""Headless QA driver for loderunner-tui.
+"""Headless QA driver for goldcarver-tui.
 
 Runs each scenario in a fresh LodeRunnerApp via App.run_test(), saves an
 SVG screenshot, and reports pass/fail. Exit code = number of failures.
@@ -16,10 +16,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Awaitable, Callable
 
-from loderunner_tui.app import LodeRunnerApp
-from loderunner_tui import engine as E
-from loderunner_tui.engine import Game
-from loderunner_tui.levels import PACKS, pack_by_name
+from goldcarver_tui.app import LodeRunnerApp
+from goldcarver_tui import engine as E
+from goldcarver_tui.engine import Game
+from goldcarver_tui.levels import PACKS, pack_by_name
 
 OUT = Path(__file__).resolve().parent / "out"
 OUT.mkdir(exist_ok=True)

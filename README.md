@@ -1,4 +1,4 @@
-# loderunner-tui
+# goldcarver-tui
 Dig the trap. Take the gold.
 
 ![Hero](screenshots/hero.svg)
@@ -15,8 +15,8 @@ Three hundred and seventy-one levels. Five packs. Dig a hole, trap a guard, grab
 
 ## Install & Run
 ```bash
-git clone https://github.com/akakabrian/loderunner-tui
-cd loderunner-tui
+git clone https://github.com/akakabrian/goldcarver-tui
+cd goldcarver-tui
 make
 make run
 ```
